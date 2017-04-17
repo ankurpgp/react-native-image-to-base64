@@ -1,6 +1,6 @@
 {
   "name": "react-native-img-to-base64",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Native module to get Image's base64 string",
   "keywords": [
     "React-Native"
