@@ -3,8 +3,8 @@ react-native-image-to-base64
 
 ## Installation
 
-- Run `npm install react-native-image-to-base64 --save`
-- Run `react-native link react-native-image-to-base64` (RN 0.29.1+, otherwise `rnpm link react-native-image-to-base64`)
+- Run `npm install react-native-img-to-base64 --save`
+- Run `react-native link react-native-img-to-base64` (RN 0.29.1+, otherwise `rnpm link react-native-img-to-base64`)
 
 ## Usage
 
