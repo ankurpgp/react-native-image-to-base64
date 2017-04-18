@@ -8,18 +8,10 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(getBase64String:(NSString *)input callback:(RCTResponseSenderBlock)callback)
 {
-  NSURL *url = [[NSURL alloc] initWithString:input];
-  ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-  [library assetForURL:url resultBlock:^(ALAsset *asset) {
-    ALAssetRepresentation *rep = [asset defaultRepresentation];
-    CGImageRef imageRef = [rep fullScreenImage];
-    NSData *imageData = UIImagePNGRepresentation([UIImage imageWithCGImage:imageRef]);
+    NSURL *url = [NSURL fileURLWithPath:input];
+    NSData *imageData = [NSData dataWithContentsOfURL:url];
     NSString *base64Encoded = [imageData base64EncodedStringWithOptions:0];
     callback(@[[NSNull null], base64Encoded]);
-  } failureBlock:^(NSError *error) {
-    NSLog(@"that didn't work %@", error);
-    callback(@[error]);
-  }];
 }
 
 @end
