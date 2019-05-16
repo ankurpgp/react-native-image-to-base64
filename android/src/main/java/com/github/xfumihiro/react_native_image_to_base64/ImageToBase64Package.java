@@ -14,7 +14,6 @@ import java.util.List;
 public class ImageToBase64Package implements ReactPackage {
   Intent mIntent;
 
-  @Override
   public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
 
@@ -22,12 +21,10 @@ public class ImageToBase64Package implements ReactPackage {
     return modules;
   }
 
-  @Override
   public List<Class<? extends JavaScriptModule>> createJSModules() {
     return Collections.emptyList();
   }
 
-  @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
     return Arrays.<ViewManager>asList();
   }
